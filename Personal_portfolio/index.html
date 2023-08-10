@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal_Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/sree-yeswanth-logo.jpg" class="logo"> -->
+                <p><span>Sree</span> Yeswanth</p>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>FrontEnd Developer</p>
+                <h1>Hi, I'm <span>Sree</span> Yeswanth<br> From India</h1>
+            </div>
+        </div>
+    </div>
+<!-- ---------------------about--------------- -->
+<div id='about'>
+    <div class="container">
+        <div class='row'>
+            <div class="about-col-1">
+                <img src="images/About_pic.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class='subtitle'>About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class='title'> 
+                    <p class='tab-links active-link' onclick="opentab('Skills')">Skills</p>
+                    <p class='tab-links' onclick="opentab('education')">Education</p>
+                    <p class='tab-links' onclick="opentab('certification')">Certifications</p>
+                </div>
+                <div class="tab-contents active-tab" id='Skills'>
+                    <ul>
+                        <li><span>FrontEnd Development</span><br>Designing Web</li>
+                        <li><span>AWS Development</span><br>Designing Services</li>
+                        <li><span>Python Development</span><br>Designing App</li>  
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>COMPUTER SCIENCE AND ENGINEERING (2021 - 2025)</span><br>Kgisl Institute of Technology</li>
+                        <li><span>HSC (2019 - 2021)</span><br>Amrita Vidyalayam Nallampalayam</li>
+                        <li><span>SSLC (2017 - 2018)</span><br>Amrita Vidyalayam Nallampalayam</li>  
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certification">
+                    <ul>
+                        <li><span>AWS</span><br>At ZENECKS INFOTECH</li>
+                        <li><span>Concepts in Python: Loops , Functions and Returns</span><br>At COURSERA</li>
+                        <li><span>CS50 Introduction in Python</span><br>At EDX</li>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tablink.classList.remove("active-tab");
+        }
+    }
+</script>
+</body>
+</html>
